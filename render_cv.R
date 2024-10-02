@@ -42,6 +42,12 @@ rmarkdown::render("CV_Espanol.Rmd",
                   params = list(pdf_mode = TRUE),
                   output_file = tmp_html_cv_loc)
 
+# Renderizar el CV a formato Word
+rmarkdown::render("CV_Espanol.Rmd",
+                  output_format = "word_document",
+                  output_file = "HaydeePeruyero_cv.docx")
+
+
 # Convert to PDF using Pagedown
 pagedown::chrome_print(input = tmp_html_cv_loc,
                        output = "HaydeePeruyero_cv.pdf")

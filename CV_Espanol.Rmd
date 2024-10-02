@@ -82,9 +82,9 @@ CV %>% print_languages()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  
+The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV). 
 
-The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV) and is powered by [nstrayer/cv](https://github.com/nstrayer/cv).
+The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf)
 
 Last updated on `r Sys.Date()`.
 
@@ -93,7 +93,7 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Haydeé Contreras Peruyero {#title} 
+A. Haydeé Contreras Peruyero {#title} 
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -117,7 +117,7 @@ Appointments {data-icon=chalkboard-teacher}
 CV %<>% print_section('appointments')
 ```
 
-Publications {data-icon=book}
+Publications(Selected) {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -125,7 +125,7 @@ CV %<>% print_section('academic_articles')
 ```
 
 
-Preprints {data-icon=book}
+Preprints(Selected) {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -138,7 +138,7 @@ CV %<>% print_section('preprints')
 <br>
 <br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
+Teaching Experience (Selected) {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -146,14 +146,14 @@ CV %<>% print_section('teaching_positions')
 ```
 
 
-Talks and Posters {data-icon=chalkboard-teacher}
+Talks and Posters (Selected) {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('talks_and_posters')
 ```
 
-Science Communication {data-icon=atom}
+Science Communication (Selected) {data-icon=atom}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -161,14 +161,14 @@ CV %<>% print_section('science_communication')
 ```
 
 
-Courses {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
+<!-- Courses {data-icon=graduation-cap data-concise=true} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-CV %<>% print_section('course_attendances')
-```
+<!-- ```{r} -->
+<!-- CV %<>% print_section('course_attendances') -->
+<!-- ``` -->
 
-Research Experience {data-icon=laptop}
+Research Experience (Selected) {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -182,7 +182,7 @@ CV %<>% print_section('awards')
 ```
 
 
-Synergistic Activities{data-icon=chalkboard-teacher}
+Synergistic Activities (Selected){data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
