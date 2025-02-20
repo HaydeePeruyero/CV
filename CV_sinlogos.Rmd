@@ -25,7 +25,7 @@ source("cv_printing_functions.r")
 # Carga los datos de tu hoja de hoja de cálculo de google
 #En este chunk sólo modifica la dirección de tu CV
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1rLDqEB2n3gZVBcBtIVpiq1H8S_zSJJIyFsthm74R04c/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1wkfcmXi3qGV4DdT4DMNz-TWu3Pv46U4TupCCWN_FDgw/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
  )
 
@@ -138,6 +138,15 @@ CV %<>% print_section('preprints')
 <br>
 <br>
 
+Formation of Human Resources
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('human_resources')
+```
+
+
+
 Teaching Experience 
 --------------------------------------------------------------------------------
 
@@ -146,14 +155,14 @@ CV %<>% print_section('teaching_positions')
 ```
 
 
-Talks and Posters 
+Talks and Posters
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('talks_and_posters')
 ```
 
-Science Communication {
+Science Communication 
 --------------------------------------------------------------------------------
 
 ```{r}
