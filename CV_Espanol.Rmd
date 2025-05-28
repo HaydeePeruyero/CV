@@ -25,7 +25,7 @@ source("cv_printing_functions.r")
 # Carga los datos de tu hoja de hoja de cálculo de google
 #En este chunk sólo modifica la dirección de tu CV
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1rLDqEB2n3gZVBcBtIVpiq1H8S_zSJJIyFsthm74R04c/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1wkfcmXi3qGV4DdT4DMNz-TWu3Pv46U4TupCCWN_FDgw/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
  )
 
@@ -84,7 +84,11 @@ Disclaimer {#disclaimer}
 
 The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV). 
 
-The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf)
+
+The short version of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_Short_HaydeePeruyero.pdf)
+
+
+<!-- The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf) -->
 
 Last updated on `r Sys.Date()`.
 
@@ -117,28 +121,40 @@ Appointments {data-icon=chalkboard-teacher}
 CV %<>% print_section('appointments')
 ```
 
-Publications(Selected) {data-icon=book}
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
+Accepted papers {data-icon=book}
+--------------------------------------------------------------------------------
 
-Preprints(Selected) {data-icon=book}
+```{r}
+CV %<>% print_section('accepted')
+```
+
+Preprints {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('preprints')
 ```
 
+Papers in preparation {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('in_preparation')
+```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 <br>
 <br>
 <br>
 
-Teaching Experience (Selected) {data-icon=chalkboard-teacher}
+Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -146,20 +162,26 @@ CV %<>% print_section('teaching_positions')
 ```
 
 
-Talks and Posters (Selected) {data-icon=chalkboard-teacher}
+Talks and Posters {data-icon=comments}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('talks_and_posters')
 ```
 
-Science Communication (Selected) {data-icon=atom}
+Science Communication {data-icon=atom}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('science_communication')
 ```
 
+Synergistic Activities {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('synergistic_activities')
+```
 
 <!-- Courses {data-icon=graduation-cap data-concise=true} -->
 <!-- -------------------------------------------------------------------------------- -->
@@ -168,29 +190,57 @@ CV %<>% print_section('science_communication')
 <!-- CV %<>% print_section('course_attendances') -->
 <!-- ``` -->
 
-Research Experience (Selected) {data-icon=laptop}
+Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('research_positions')
 ```
 
-Awards{data-icon=chalkboard-teacher}
+Awards{data-icon=award}
 --------------------------------------------------------------------------------
 ```{r}
 CV %<>% print_section('awards')
 ```
 
 
-Synergistic Activities (Selected){data-icon=chalkboard-teacher}
+Thesis Supervision {data-icon=user-graduate data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('synergistic_activities')
+CV %<>% print_section('tesis_supervisor')
+```
+
+Thesis Reviewing {data-icon=search data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('tesis_revisor')
 ```
 
 
+Certifications {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
 
+```{r}
+CV %<>% print_section('certifications')
+```
+
+
+Training and work related to equality  {data-icon=balance-scale data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses_gender')
+```
+
+
+Additional Professional Training (Fieldwork Safety and First Aid) {data-icon=medkit}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses_health')
+```
 
 ```{r}
 CV %<>% print_links()
