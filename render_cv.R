@@ -11,7 +11,7 @@
 library(tidyverse)
 source("cv_printing_functions.R")
 cv_data <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1wkfcmXi3qGV4DdT4DMNz-TWu3Pv46U4TupCCWN_FDgw/edit?usp=sharing"
+  data_location = "https://docs.google.com/spreadsheets/d/1wRtEfO0mqAP3UdmZDiNqLEBJ4V4Cekw0VfN8O-IWi-8/edit?usp=sharing"
 )
 
 readr::write_rds(cv_data, 'cached_positions.rds')
