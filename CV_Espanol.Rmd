@@ -94,7 +94,7 @@ Disclaimer {#disclaimer}
 <!-- The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV).  -->
 
 
-The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_Short_HaydeePeruyero.pdf)
+The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_Short_HaydeePeruyero_July2025.pdf)
 
 
 <!-- The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf) -->
