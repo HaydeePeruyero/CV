@@ -34,7 +34,7 @@ source("cv_printing_functions.r")
 # Carga los datos de tu hoja de hoja de cálculo de google
 #En este chunk sólo modifica la dirección de tu CV
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1wRtEfO0mqAP3UdmZDiNqLEBJ4V4Cekw0VfN8O-IWi-8/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1yUxdL00yte1czYjmBTptsGtzu5qH6MX4Mdf-eHRUzcc/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
  )
 
@@ -94,7 +94,7 @@ Disclaimer {#disclaimer}
 <!-- The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV).  -->
 
 
-The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_Short_HaydeePeruyero_July2025.pdf)
+The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_short_Aug2025.pdf)
 
 
 <!-- The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf) -->
@@ -134,19 +134,26 @@ Appointments {data-icon=chalkboard-teacher}
 CV %<>% print_section('appointments')
 ```
 
-Relevant Publications for the Position {data-icon=book}
+Publications{data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
-Other Publications {data-icon=book}
---------------------------------------------------------------------------------
+<!-- Relevant Publications for the Position {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-CV %<>% print_section('academic_articles_no')
-```
+<!-- ```{r} -->
+<!-- CV %<>% print_section('academic_articles') -->
+<!-- ``` -->
+
+<!-- Other Publications {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- CV %<>% print_section('academic_articles_no') -->
+<!-- ``` -->
 
 Accepted papers {data-icon=book}
 --------------------------------------------------------------------------------
