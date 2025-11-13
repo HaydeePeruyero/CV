@@ -70,8 +70,6 @@ Contact {#contact}
 CV %>% print_contact_info()
 ```
 
-<br>
-
 
 Programming Languages {#skills}
 --------------------------------------------------------------------------------
@@ -88,11 +86,13 @@ Languages {#languages}
 CV %>% print_languages()
 ```
 
-Summary {}
+About me {}
 --------------------------------------------------------------------------------
 I work at the intersection of geometry, topology, and bioinformatics, applying TDA and ML to explore patterns in biological data. I’m also passionate about teaching and programming.
 
-Disclaimer {#disclaimer}
+<!--Disclaimer {#disclaimer}-->
+
+Other CV Versions
 --------------------------------------------------------------------------------
 
 <!-- The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV).  -->
@@ -160,7 +160,7 @@ CV %<>% print_section('academic_articles')
 <!-- ``` -->
 
 <!--Other Publications {data-icon=book}-->
----------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
 
 <!--```{r}-->
 <!--CV %<>% print_section('academic_articles_no')-->
