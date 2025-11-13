@@ -34,7 +34,7 @@ source("cv_printing_functions.r")
 # Carga los datos de tu hoja de hoja de cálculo de google
 #En este chunk sólo modifica la dirección de tu CV
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1yUxdL00yte1czYjmBTptsGtzu5qH6MX4Mdf-eHRUzcc/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1wRtEfO0mqAP3UdmZDiNqLEBJ4V4Cekw0VfN8O-IWi-8/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
  )
 
@@ -88,14 +88,19 @@ Languages {#languages}
 CV %>% print_languages()
 ```
 
+Summary {}
+--------------------------------------------------------------------------------
+I work at the intersection of geometry, topology, and bioinformatics, applying TDA and ML to explore patterns in biological data. I’m also passionate about teaching and programming.
+
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 <!-- The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV).  -->
 
 
-The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_short_Aug2025.pdf)
+The **short version** of my CV can be found in this link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_short_Nov2025.pdf)
 
+The **Spanish simplified version** of my CV is available at this link [Spanish CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_Simplified_November2025.pdf)
 
 <!-- The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf) -->
 
@@ -113,10 +118,16 @@ A. Haydeé Contreras Peruyero {#title}
 <!-- My research interests lie at the intersection of geometry, topology, and bioinformatics. My work has focused on geometric group theory and the application of Topological Data Analysis (TDA) to problems in genomics, metagenomics, and pangenomics. I also use machine learning and statistics to explore structures in biological data. I have a strong passion for teaching, programming, and learning languages. -->
 
 
+
+
+
 ```{r}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
+
+
+
 
 
 
@@ -148,12 +159,12 @@ CV %<>% print_section('academic_articles')
 <!-- CV %<>% print_section('academic_articles') -->
 <!-- ``` -->
 
-<!-- Other Publications {data-icon=book} -->
-<!-- -------------------------------------------------------------------------------- -->
+<!--Other Publications {data-icon=book}-->
+---------------------------------------------------------------------------------->
 
-<!-- ```{r} -->
-<!-- CV %<>% print_section('academic_articles_no') -->
-<!-- ``` -->
+<!--```{r}-->
+<!--CV %<>% print_section('academic_articles_no')-->
+<!--```-->
 
 Accepted papers {data-icon=book}
 --------------------------------------------------------------------------------
@@ -169,12 +180,12 @@ Preprints {data-icon=book}
 CV %<>% print_section('preprints')
 ```
 
-Papers in preparation {data-icon=book}
---------------------------------------------------------------------------------
+<!-- Papers in preparation {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-CV %<>% print_section('in_preparation')
-```
+<!-- ```{r} -->
+<!-- CV %<>% print_section('in_preparation') -->
+<!-- ``` -->
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 <br>
@@ -243,13 +254,12 @@ Synergistic Activities {data-icon=chalkboard-teacher}
 CV %<>% print_section('synergistic_activities')
 ```
 
-<!-- Courses {data-icon=graduation-cap data-concise=true} -->
-<!-- -------------------------------------------------------------------------------- -->
+Workshops and Courses Attended {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
 
-<!-- ```{r} -->
-<!-- CV %<>% print_section('course_attendances') -->
-<!-- ``` -->
-
+```{r}
+CV %<>% print_section('course_attendances')
+```
 
 
 Certifications {data-icon=graduation-cap data-concise=true}
@@ -274,6 +284,7 @@ Additional Professional Training (Fieldwork Safety and First Aid) {data-icon=med
 ```{r}
 CV %<>% print_section('courses_health')
 ```
+
 
 ```{r}
 CV %<>% print_links()
