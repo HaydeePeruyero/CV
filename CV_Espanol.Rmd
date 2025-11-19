@@ -34,7 +34,7 @@ source("cv_printing_functions.r")
 # Carga los datos de tu hoja de hoja de cálculo de google
 #En este chunk sólo modifica la dirección de tu CV
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1wRtEfO0mqAP3UdmZDiNqLEBJ4V4Cekw0VfN8O-IWi-8/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1FMDzFXUOvlLltIFz8G9rzHk2dJkEDV1ObWGnu9Uha9g/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
  )
 
