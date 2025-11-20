@@ -213,7 +213,7 @@ Thesis Supervision {data-icon=user-graduate data-concise=true}
 CV %<>% print_section('tesis_supervisor')
 ```
 
-Commites {data-icon=search data-concise=true}
+Committees {data-icon=search data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
