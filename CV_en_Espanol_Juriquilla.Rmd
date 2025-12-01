@@ -1,0 +1,272 @@
+---
+title: "CV"
+author: Haydeé Peruyero
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+---
+
+```{css, echo=FALSE}
+/* Turn-off side-bar for publications */
+.pagedjs_page:not(:nth-of-type(-n+1)) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(magrittr)
+library(knitr)
+source("cv_printing_functions.r")
+
+# Carga los datos de tu hoja de hoja de cálculo de google
+#En este chunk sólo modifica la dirección de tu CV
+CV <- create_CV_object(
+  data_location = "https://docs.google.com/spreadsheets/d/1rF-bp-ODfpoXdajnXHexEbmkO54fIS28vvS0PZJdFrU/edit?usp=sharing",  
+  pdf_mode = params$pdf_mode
+ )
+
+```
+
+
+```{r}
+# Corrige la alinacion de los puntos
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+```{r}
+## Construya una red interactiva de puestos coloreados por sección
+# y conectados si ocurrieron en el mismo año
+#datadrivencv::build_network_logo(CV$entries_data)
+```
+
+
+
+Contacto {#contact}
+--------------------------------------------------------------------------------
+```{r informacion de contacto}
+CV %>% print_contact_info()
+```
+
+
+Lenguajes de Programación {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_programming_languages()
+```
+
+
+Idiomas {#languages}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_languages()
+```
+
+Sobre mi {}
+--------------------------------------------------------------------------------
+Trabajo en la intersección entre geometría, topología y bioinformática, aplicando TDA y ML para explorar patrones en datos biológicos. También me apasionan la enseñanza y la programación.
+
+<!--Disclaimer {#disclaimer}-->
+
+Otras versiones de mi CV
+--------------------------------------------------------------------------------
+
+<!-- The source code is available at [HaydeePeruyero/CV](https://github.com/HaydeePeruyero/CV).  -->
+
+
+La **versión corta**  de mi CV se puede encontrar en el link [Short CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_short_Nov2025.pdf)
+
+La **versión simplificada en español** de mi CV está disponible en [Spanish CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_pdf/CV_Simplified_November2025.pdf)
+
+<!-- The extended version of my CV can be found in this link [Extended CV](https://github.com/HaydeePeruyero/CV/blob/main/CV_HaydeePeruyero.pdf) -->
+
+Última actualización `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+A. Haydeé Contreras Peruyero {#title} 
+--------------------------------------------------------------------------------
+
+
+<!-- My research interests lie at the intersection of geometry, topology, and bioinformatics. My work has focused on geometric group theory and the application of Topological Data Analysis (TDA) to problems in genomics, metagenomics, and pangenomics. I also use machine learning and statistics to explore structures in biological data. I have a strong passion for teaching, programming, and learning languages. -->
+
+
+
+
+
+```{r}
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
+```
+
+Datos Personales {data-icon=user data-concise=true}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('personal_data')
+```
+
+
+
+Educación {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+Experiencia Laboral {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('appointments')
+```
+
+Publicaciones {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_articles')
+```
+
+Artículos aceptados {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('accepted')
+```
+
+Preprints {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('preprints')
+```
+
+Experiencia Docente {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses')
+```
+
+Cursos cortos y Talleres {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('mini_courses')
+```
+
+Dirección de Tesis {data-icon=user-graduate data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('tesis_supervisor')
+```
+
+Participación en Comités {data-icon=search data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('commites')
+```
+
+Estancias de Investigación {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('research_positions')
+```
+
+Pláticas y Pósters {data-icon=comments}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('talks_and_posters')
+```
+
+Premios {data-icon=award}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('awards')
+```
+
+Actividades de Divulgación {data-icon=atom}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('science_communication')
+```
+
+Actividades de Vinculación Académica {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('synergistic_activities')
+```
+
+Talleres y cursos asistidos {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('course_attendances')
+```
+
+
+Certificaciones {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('certifications')
+```
+
+
+Capacitación institucional en igualdad y seguridad {data-icon=balance-scale data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses_gender')
+```
+
+
+Formación Profesional Adicional (Seguridad en trabajo de campo y primeros auxilios) {data-icon=medkit}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses_health')
+```
+
+
+```{r}
+CV %<>% print_links()
+```
+
+
+
+
